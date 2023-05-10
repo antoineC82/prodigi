@@ -1,0 +1,756 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <link rel="shortcut icon" type="image/png" href="{{ '../IMG/favicon/favicon-16x16.png'  | absolute_url }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="../IMG/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../IMG/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../IMG/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../IMG/favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <meta charset="utf-8">
+    <meta name="keywords" content="training, MX, motoclub, FFM, motocross, entraînement de motocross, licence FFM, association de motocross, Fédération française de motocyclisme">
+    <meta name="description" content="MXTRAINER, l'application qui gère ta saison de motocross. un espace motoclub pour gérer ses entraînements, un espace pilote pour s'y inscrire et un espace photographes pour publier les meilleurs clichés !">
+    <meta name="author" content="MXTRAINER">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MXTRAINER</title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.8/swiper-bundle.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.8/swiper-bundle.min.js"></script>
+
+
+    <link rel="stylesheet" href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+  <!-- Modal -->
+  <div class="modal fade" id="contactmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="container-fluid">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="row mod">
+              <div class="col col-sm-6 left">
+                <h1 style="font-weight:600;">Contactez-nous</h1>
+                <p>Notre équipe mettra tout en oeuvre pour vous répondre dans les meilleurs délais.</p>
+                <form class="contact-form">
+                  <div class="row">
+                      <div class="col-12 col-md-6">
+                          <div class="form-floating mb-3">
+                              <input type="text" class="form-control" id="floatingInput" placeholder="Lafargue" required>
+                              <label for="floatingInput">Nom*</label>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <div class="form-floating mb-3">
+                              <input type="text" class="form-control" id="floatingInput" placeholder="John" required>
+                              <label for="floatingInput">Prénom*</label>
+                            </div>
+                        </div>
+                  </div>
+                <div class="col col-sm-12">
+                  <div class="form-floating mb-3">
+                      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                      <label for="floatingInput">Adresse mail*</label>
+                    </div>
+                </div>
+                <div class="col col-sm-12">
+                  <div class="form-floating mb-3">
+                      <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" style="height: 100px" required></textarea>
+                      <label for="floatingTextarea">Message*</label>
+                    </div>
+                </div>
+            <div class="col col-sm-12" style="display:flex; justify-content:center;">
+              <button id="okok" class="square-button"><span>Envoyer</span></button>
+            </div>
+          </form>
+        </div>
+        <div class="col col-sm-6 right">
+          <h2>Coordonnées de <span>MXTRAINER</span></h2>
+          <ul>
+            <li><i style="margin-right: 15px;" class="fa-solid fa-location-dot fa-lg	"></i><a href="">2937 Route de Grezas, 82120 Mansonville</a></li>
+            <li><i style="margin-right: 15px;"  class="fa-regular fa-envelope fa-lg	"></i><a href="mail:contact@mxtrainer.fr">contact@mxtrainer.fr</a></li>
+            <li><i style="margin-right: 15px;"  class="fa-solid fa-phone fa-lg	"></i><a href="tel:+0669457474">06.69.45.74.74</a></li>
+          </ul>
+          <div class="content-RS">
+            <a style="margin-left: 0px;" href="https://www.facebook.com/profile.php?id=100090329315348" target="_blank"> 
+              <img src="../IMG/assets/SVG/FB.svg" alt="Facebook">
+            </a>
+          
+          <a href="https://www.instagram.com/mxtrainer.fr/" target="_blank"> 
+            <img src="../IMG/assets/SVG/insta.svg" alt="Instagram">
+          </a>
+          
+          <a href="https://www.tiktok.com/@mxtrainer.fr?is_from_webapp=1&sender_device=pc" target="_blank">
+            <img src="../IMG/assets/SVG/tiktok.svg" alt="Tiktok">
+          </a>
+          </div>
+      </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="interestedModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="container-fluid">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="row mod">
+              <div class="col col-sm-6 left">
+                <h1 style="font-weight:600;">Intéressez ?</h1>
+                <p>Remplissez ce formulaire pour être tenue au courant de la sortie de la plateforme !</p>
+                <form class="contact-form">
+                  <div class="row">
+                      <div class="col-12 col-md-6">
+                          <div class="form-floating mb-3">
+                              <input type="text" class="form-control" id="floatingInput" placeholder="Lafargue" required>
+                              <label for="floatingInput">Nom*</label>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <div class="form-floating mb-3">
+                              <input type="text" class="form-control" id="floatingInput" placeholder="John" required>
+                              <label for="floatingInput">Prénom*</label>
+                            </div>
+                        </div>
+                  </div>
+                <div class="col col-sm-12">
+                  <div class="form-floating mb-3">
+                      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                      <label for="floatingInput">Adresse mail*</label>
+                    </div>
+                </div>
+                <div class="col col-sm-12">
+                  <div class="form-floating mb-3">
+                      <select class="form-select interested-select" id="floatingSelect" aria-label="Floating label select example" required>
+                        <option selected>Selectionner un profil*</option>
+                        <option value="Pilote">Pilote</option>
+                        <option value="Photographe">Photographe</option>
+                        <option value="Motoclub">Motoclub</option>
+                        <option value="Autre">Autre</option>
+                      </select>
+                      <label for="floatingSelect">Vous êtes...</label>
+              </div>
+            </div>
+            <div class="col col-sm-12" style="display:flex; justify-content:center;">
+              <button class="square-button"><span>Envoyer</span></button>
+            </div>
+          </form>
+        </div>
+        <div class="col col-sm-6 right">
+          <h2>Coordonnées de <span>MXTRAINER</span></h2>
+          <ul>
+            <li><i style="margin-right: 15px;" class="fa-solid fa-location-dot fa-lg	"></i><a href="">2937 Route de Grezas, 82120 Mansonville</a></li>
+            <li><i style="margin-right: 15px;"  class="fa-regular fa-envelope fa-lg	"></i><a href="mail:contact@mxtrainer.fr">contact@mxtrainer.fr</a></li>
+            <li><i style="margin-right: 15px;"  class="fa-solid fa-phone fa-lg	"></i><a href="tel:+0669457474">06.69.45.74.74</a></li>
+          </ul>
+          <div class="content-RS">
+            <a style="margin-left: 0px;" href="https://www.facebook.com/profile.php?id=100090329315348" target="_blank"> 
+              <img src="../IMG/assets/SVG/FB.svg" alt="Facebook">
+            </a>
+          
+          <a href="https://www.instagram.com/mxtrainer.fr/" target="_blank"> 
+            <img src="../IMG/assets/SVG/insta.svg" alt="Instagram">
+          </a>
+          
+          <a href="https://www.tiktok.com/@mxtrainer.fr?is_from_webapp=1&sender_device=pc" target="_blank">
+            <img src="../IMG/assets/SVG/tiktok.svg" alt="Tiktok">
+          </a>
+          </div>
+      </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+    <nav class="navbar navbar-expand-lg bg-body-white shadow-sm">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+        <img src="../IMG/assets/SVG/logo.svg" alt="MXTRAINER" width="auto" height="auto">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="#fonctionnalités">Fonctionnalités</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#tutoriel">Tutoriel</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#tabs">Espaces</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#FAQ">FAQ</a>
+          </li>
+      </ul>
+      <div class="nav-button">
+        <button onclick="window.location='../signup/signup.html'" class="btn btn-sm btn-outline-secondary signup" data="S'inscrire" type="button"><span>S'inscrire</span></button>
+        <button data-bs-toggle="modal" data-bs-target="#interestedModal" class="btn btn-sm btn-outline-secondary login" type="button"><span>Connexion</span></button>
+      </div>
+        <a data-bs-toggle="modal" data-bs-target="#interestedModal"  data-bs-whatever="Motoclub" class="nav-link question">Vous êtes un motoclub ?</a>
+    </div>
+  </div>
+</nav>
+      <div class="container-fluid">
+        <div class="row block1">
+          <div class="col col-sm-4">
+            <div class="intro">
+              <img class="display1" src="../IMG/assets/SVG/display-logo.svg" alt="MXTRAINER">
+              <img class="display2" src="../IMG/assets/SVG/display-logo2.svg" alt="MXTRAINER">
+              <h6>La première application dédiée à ta saison de motocross ! Continue cette aventure accompagnée par MXTRAINER !</h6>
+              <h4>Application disponible pour l'été 2023 !</h4>
+            </div>
+          </div>
+          <div id="aos" data-aos="fade-left" data-aos-duration="1000" class="col col-sm-8 screen1">
+            <img src="../IMG/screen/SVG/appweb.svg" alt="MXTRAINER-appweb" style="width:100%;">
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="container-fluid">
+        <div class="row block2" id="fonctionnalités">
+          <div class="col col-md-12 col-lg-7">
+            <div class="container-fluid">
+              <div class="row functionnality">
+                <div data-aos="fade-down-right"data-aos-anchor-placement="bottom-bottom" class="col col-sm-12 block2-intro">
+                  <h1>Fonctionnalités de <span>MXTRAINER</span></h1>
+                  <p>MXTRAINER vous facilitera la tâche en tant que passionné de motocross, que vous soyez débutant ou professionnel. De multiples fonctionnalités vous feront gagner du temps, ce qui vous permettra
+                    de vous préparer, vous et votre moto.</p>
+                </div>
+                <div class="col col-xs-6 d-flex" style="flex-wrap: wrap;">
+                  <div data-aos="fade-down-right"  data-aos-duration="400" class="col col-sm-5 block2-fonction">
+                    <div class="block-icon">
+                      <img src="../IMG/assets/SVG/notif.svg" alt="fonctionnalité-notifications">
+                    </div>
+                    <div class="content">
+                      <h5 style="font-weight: 600;opacity: 0.7;">Notification en temps réel</h5>
+                    <p>Vous serez notifié dès qu’un de vos motoclubs favoris ajoute un événement.</p>
+                    </div>     
+                  </div>               
+                  <div data-aos="fade-down-right" data-aos-duration="600" class="col col-sm-5 block2-fonction">
+                    <div class="block-icon">
+                      <img src="../IMG/assets/SVG/recherche.svg" alt="fonctionnalité-recherche">
+                    </div>
+                    <div class="content">
+                      <h5 style="font-weight: 600;opacity: 0.7;">Recherche simplifiée</h5>
+                    <p>La localisation et les fonctionnalités de recherches vous permettront de trouver vos motoclubs favoris en un clic.</p>
+                    </div>     
+                  </div>  
+                  <div data-aos="fade-down-right" data-aos-duration="800" class="col col-sm-5 block2-fonction">
+                    <div class="block-icon">
+                      <img src="../IMG/assets/SVG/tout.svg" alt="fonctionnalité-tout">
+                    </div>
+                    <div class="content">
+                      <h5 style="font-weight: 600;opacity: 0.7;">Tout-en-un</h5>
+                    <p>MXTRAINER est 100% complète. Elle permet l’inscription à un entraînement, la consultation d’album et plein d’autres fonctionnalités.</p>
+                    </div>     
+                  </div> 
+                  <div data-aos="fade-down-right" data-aos-duration="1000" class="col col-sm-5 block2-fonction">
+                    <div class="block-icon">
+                      <img src="../IMG/assets/SVG/paiement.svg" alt="fonctionnalité-paiement">
+                    </div>
+                    <div class="content">
+                      <h5 style="font-weight: 600;opacity: 0.7;">Facilité de paiement</h5>
+                    <p>Grâce à MXTRAINER, le paiement des événements sera un jeu d’enfant.</p>
+                    </div>     
+                  </div>  
+                  <div data-aos="fade-down-right" data-aos-duration="1200" class="col col-sm-5 block2-fonction">
+                    <div class="block-icon">
+                      <img src="../IMG/assets/SVG/design.svg" alt="fonctionnalité-design">
+                    </div>
+                    <div class="content">
+                      <h5 style="font-weight: 600;opacity: 0.7;">Design ergonomique</h5>
+                    <p>Le design permet aux multiples fonctionnalités de se fondre dans le décor, pour allier performance et esthétique.</p>
+                    </div>     
+                  </div>  
+                  <div data-aos="fade-down-right" data-aos-duration="1400" class="col col-sm-5 block2-fonction">
+                    <div class="block-icon">
+                      <img src="../IMG/assets/SVG/convient.svg" alt="fonctionnalité-tout">
+                    </div>
+                    <div class="content">
+                      <h5 style="font-weight: 600;opacity: 0.7;">Adapté à tous</h5>
+                    <p>MXTRAINER est une solution pour les pilotes, mais également pour les motoclubs et pour les photographes de motocross.</p>
+                    </div>     
+                  </div>  
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="col col-md-12 col-lg-5 screen2">
+          <img src="../IMG/screen/SVG/appmobile.svg" id="mockup1" alt="MXTRAINER-appmobile" style="width:80%;">
+          <img src="../IMG/screen/SVG/appmobile.svg" id="mockup2" alt="MXTRAINER-appmobile" style="width:55%;">
+        </div>
+        </div>
+      </div>
+
+
+      <section class="tutorial" id="tutoriel">
+        <div class="intro-tutorial">
+          <h1 style="font-size: 36px;">Comment ça marche ?</h1>
+          <p style="font-size: 18px;font-weight: 300">Voici un tutoriel vous permettant de comprendre un peu mieux l'utilisation de mxtrainer</p>
+        </div>
+        <div class="swiper-full-mobile">
+          <main class="main">
+            <div class="container">
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="card-image">
+                      <img src="../IMG/slider/SVG/screen0.svg" alt="screen1-appmobile">
+                    </div>
+                    <div class="card-text">
+                      <h1>Étape 1 : Inscrivez-vous</h1>
+                      <h3>Une fois l’application téléchargée, inscrivez-vous, choisissez si vous
+                         êtes photographe ou pilote puis entrez vos informations de compte.</h3>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card-image">
+                      <img src="../IMG/slider/SVG/screen1.svg" alt="screen2-appmobile">
+                    </div>
+                    <div class="card-text">
+                      <h1>Étape 1.2 : Inscrivez-vous</h1>
+                      <h3>Une fois l’application téléchargée, inscrivez-vous, choisissez si vous
+                        êtes photographe ou pilote puis entrez vos informations de compte.</h3>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card-image">
+                      <img src="../IMG/slider/SVG/screen2.svg" alt="screen3-appmobile">
+                    </div>
+                    <div class="card-text">
+                      <h1>Étape 2 : Recherchez des évènements</h1>
+                      <h3>Recherchez des événements tout en ajoutant vos motoclubs favoris pour être au courant
+                        de tous les événements.</h3>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card-image">
+                      <img src="../IMG/slider/SVG/screen3.svg" alt="screen4-appmobile">
+                    </div>
+                      <div class="card-text">
+                        <h1>Étape 2.2 : Recherchez des évènements</h1>
+                        <h3>Recherchez des événements tout en ajoutant vos motoclubs favoris pour être au courant
+                          de tous les événements.</h3>
+                      </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card-image">
+                      <img src="../IMG/slider/SVG/screen4.svg" alt="screen5-appmobile">
+                    </div>
+                    <div class="card-text">
+                      <h1>Étape 3 : Inscrivez-vous aux évènements</h1>
+                      <h3>Inscrivez-vous aux entraînements publiés par les motoclubs et gazzzzz !</h3>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card-image">
+                      <img src="../IMG/slider/screen5.png" alt="screen6-appmobile">
+                    </div>
+                    <div class="card-text">
+                      <h1>Étape 3.2 : Inscrivez-vous aux évènements</h1>
+                      <h3>Inscrivez-vous aux entraînements publiés par les motoclubs et gazzzzz !</h3>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card-image">
+                      <img src="../IMG/slider/SVG/screen6.svg" alt="screen7-appmobile">
+                    </div>
+                    <div class="card-text">
+                      <h1>Étape 4 : Retrouvez les meilleurs clichés !</h1>
+                      <h3>Une fois la journée d'entraînement terminée, vous retrouverez les meilleurs clichés de vous publier par les photographes.</h3>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="card-image">
+                      <img src="../IMG/slider/SVG/screen7.svg" alt="screen8-appmobile">
+                    </div>
+                    <div class="card-text">
+                      <h1>Étape 4.2 : Retrouvez les meilleurs clichés !</h1>
+                      <h3>Une fois la journée d'entraînement terminée, vous retrouverez les meilleurs clichés de vous publier par les photographes.</h3>
+                    </div>
+                  </div>
+                </div>
+                <!-- Add Scrollbar -->
+                <div class="swiper-button-next">
+                  <i class="fas fa-chevron-circle-right arrow-icon"></i>
+                </div>
+                <div class="swiper-button-prev">
+                  <i class="fas fa-chevron-circle-left arrow-icon"></i>
+                </div>
+              </div>
+            </div>
+          </main>
+      </div>
+  </section>
+  <div class="container-fluid block-motoclub">
+    <div class="row block3" id="espace-motoclub">
+      <div class="col col-sm-7 screen4">
+        <img src="../IMG/screen/SVG/appweb-motoclub.svg" alt="MXTRAINER-motoclub" style="width:90%;">
+      </div>
+      <div class="col col-sm-5">
+        <div class="intro3">
+          <h4>Espace motoclub</h4>
+          <ul>
+            <li>Gérer vos  événements</li>
+            <li>Publier des publications</li>
+            <li>Gérer les albums photos des photographes</li>
+            <li>Météo, horaires, prix, tout est modulable</li>
+            <li>Paiement ou acompte directement en ligne</li>
+          </ul>
+          <button data-bs-toggle="modal" data-bs-target="#interestedModal"  data-bs-whatever="Motoclub" class="btn btn-sm btn-outline-secondary more" type="button"><span>En savoir plus</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<section id="tabs">
+	<div class="container">
+		<h6 class="section-title h1">MXTRAINER - 3 espaces</h6>
+		<div class="row">
+			<div class="col-xs-12 ">
+				<nav>
+					<div class="nav nav-tabs nav-fill nav-espace" id="nav-tab" role="tablist">
+						<a class="nav-item nav-link active" id="nav-photographe-tab" data-toggle="tab" href="#nav-photographe" role="tab" aria-controls="nav-photographe" aria-selected="true">Motoclub</a>
+						<a class="nav-item nav-link" id="nav-motoclub-tab" data-toggle="tab" href="#nav-motoclub" role="tab" aria-controls="nav-motoclub" aria-selected="false">Pilote</a>
+						<a class="nav-item nav-link" id="nav-pilote-tab" data-toggle="tab" href="#nav-pilote" role="tab" aria-controls="nav-pilote" aria-selected="false">Photographe</a>
+					</div>
+				</nav>
+				<div class="tab-content" id="nav-tabContent">
+					<div class="tab-pane fade show active" id="nav-photographe" role="tabpanel" aria-labelledby="nav-photographe-tab">
+            <div class="container-fluid">
+              <div class="row content-espace">
+                <div class="col col-sm-6"><img src="../IMG/assets/SVG/motoclub.svg" alt="espace-motoclub" style="width:90%;"></div>
+                <div class="col col-sm-6"><h4>Espace motoclub</h4><p>MXTRAINER permettra aux différents 
+                    motoclubs de configurer et publier leurs entraînements. Il aura également plusieurs possibilités de paiements 
+                    et pourra faire vivre son motoclub digitalement. MXTRAINER facilite la gestion de vos motoclubs !</p>
+                </div>
+              </div>
+            </div>
+					</div>
+					<div class="tab-pane fade" id="nav-motoclub" role="tabpanel" aria-labelledby="nav-motoclub-tab">
+            <div class="container-fluid">
+              <div class="row content-espace">
+                <div class="col col-sm-6 second-space-text"><h4>Espace pilote</h4><p>Rien de mieux que MXTRAINER pour les pilotes ! 
+                  Laisse MXTRAINER gérer ta saison et entraîne toi tout les week-ends de l'année. De plus, tu pourras récupérer tes meilleurs 
+                  clichés pris par les photographes ! MXTRAINER sera ton allié pour toute la gestion de ta saison !</p>
+                </div>
+                <div class="col col-sm-6 second-space-img"><img src="../IMG/assets/SVG/pilote.svg" alt="espace-pilote" style="width:90%;"></div>
+              </div>
+            </div>					
+          </div>
+					<div class="tab-pane fade" id="nav-pilote" role="tabpanel" aria-labelledby="nav-pilote-tab">
+            <div class="container-fluid">
+              <div class="row content-espace">
+                <div class="col col-sm-6"><img src="../IMG/assets/SVG/photo.svg" alt="espace-photogrpaphe" style="width:90%;"></div>
+                <div class="col col-sm-6"><h4>Espace photographe</h4><p>Grâce à MXTRAINER, vos photos prisent lors des événements 
+                    MX alimenteront votre profil photographe vous permettant d’augmenter votre notoriété. De plus, vos albums seront disponibles
+                     sur les profils motoclubs et les pilotes seront notifiés de la disponibilité des albums.</p>
+                </div>
+              </div>
+            </div>					
+          </div>
+				</div>
+			
+			</div>
+		</div>
+	</div>
+</section>
+<!-- ./Tabs -->
+<section class="testimonial" id="avis">
+  <div class="row block4">
+    <div class="col col-sm-6">
+      <div  class="card">
+        <div class="card-body left">
+          <h5 class="card-title">102K</h5>
+          <p class="card-text">pilotes licenciés FFM, MXTRAINER accompagnera chacun d'entre eux pour gérer ses événements et l'aider dans sa saison de MX.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col col-sm-6">
+
+      <div id="carouselExemple" class="carousel slide" data-ride="carousel" data-interval="10000">
+
+        <ol class="carousel-indicators">
+            <li class="indicators" data-target="#carouselExemple" data-slide-to="0" class="active"></li>
+            <li class="indicators" data-target="#carouselExemple" data-slide-to="1"></li>
+            <li class="indicators" data-target="#carouselExemple" data-slide-to="2"></li>
+        </ol>
+
+
+        <div class="carousel-inner" style="background-color: white;">
+
+            <div class="carousel-item active">
+              <div class="card card1">
+                <div class="card-body right">
+                  <p class="card-text">J'ai été agréablement surpris par la simplicité d'utilisation de l'application pour trouver et s'inscrire à des 
+                    évènements notamment grâce aux notifications en temps réel, la fonction d'inscription était également très facile à utiliser et visualisation des photos très appréciée.</p>
+                      <div class="block-avatar">
+                        <div>
+                          <img src="../IMG/screen/SVG/avatar.svg" class="img-fluid rounded-start" alt="utilisateur-avis">
+                        </div>
+                        <div class="avatar-text">
+                          <div class="card-body avatar">
+                            <p class="card-text name" style="color:black;">Romain Fau</p>
+                            <p class="card-text attribut" style="color:black;">beta-testeur/Pilote amateur</p>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="card card2">
+                <div class="card-body right">
+                  <p class="card-text">En tant que photographe, j'ai vraiment apprécié l'application mobile pour la publication des photos lors d'évènements de motocross. 
+                    L'accès aux photos de ces évènements était également une excellente fonctionnalité pour moi. J'ai trouvé que l'application était facile à utiliser pour trouver des évènements et
+                     m'inscrire en tant que photographe pour couvrir ces évènements.</p>
+                      <div class="block-avatar">
+                        <div>
+                          <img src="../IMG/screen/SVG/avatar2.svg" class="img-fluid rounded-start" alt="utilisateur-avis">
+                        </div>
+                        <div class="avatar-text">
+                          <div class="card-body avatar">
+                            <p class="card-text name" style="color:black;">Florine Bach</p>
+                            <p class="card-text attribut" style="color:black;">beta-testeur/Photographe motocross</p>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="card card3">
+                <div class="card-body right">
+                  <p class="card-text">En tant que membre d'un motoclub, j'ai eu l'opportunité de tester l'application mobile pour la publication et l'inscription à des évènements de motocross. 
+                    Je dois dire que j'ai été impressionné par la 
+                    simplicité de l'application. Elle m'a permis de publier facilement les prochains évènements de notre motoclub et de gérer les inscriptions des participants en temps réel.</p>
+                      <div class="block-avatar">
+                        <div>
+                          <img src="../IMG/screen/SVG/avatar3.svg" class="img-fluid rounded-start" alt="utilisateur-avis">
+                        </div>
+                        <div class="avatar-text">
+                          <div class="card-body avatar">
+                            <p class="card-text name" style="color:black;">Florentin Doclar</p>
+                            <p class="card-text attribut" style="color:black;">beta-testeur/Membre d'un motoclub</p>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+              </div>
+            </div>
+
+        </div>
+
+    </div>
+      <!-- <div class="card">
+        <div class="card-body right">
+          <p class="card-text">Après avoir essayé MXTRAINER pendant 1 mois, j'ai vraiment pris conscience de son utilité, il t'aide à gérer tes entraînements et 
+            te notifie en direct pour louper aucun événement et la cerise sur le gâteau avec l'accessibilité aux photos.</p>
+              <div class="block-avatar">
+                <div>
+                  <img src="../IMG/screen/avatar.jpg" class="img-fluid rounded-start" alt="utilisateur-avis">
+                </div>
+                <div class="avatar-text">
+                  <div class="card-body avatar">
+                    <p class="card-text name" style="color:black;">Romain Fau</p>
+                    <p class="card-text attribut" style="color:black;">Pilote amateur</p>
+                  </div>
+                </div>
+              </div>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</section>
+
+
+
+<!-- <section class="Pricing" id="pricing">
+  <div class="intro-Pricing">
+    <h1 style="font-size: 36px;">Les Tarifs</h1>
+    </div>
+    <div class="block-pricing">
+      <img src="../IMG/screen/Pricing.png" class="pricing-img" alt="tarifs-prochainement">
+    </div>
+</section>
+<hr> -->
+
+
+<div class="container-fluid">
+  <div class="row block5" id="FAQ">
+    <div class="col col-md-12 col-lg-5 intro-faq">
+        <h1>Une question ?<br>Voici la FAQ</h1>
+        <p>Vous avez une autre question ou une demande ? N’hésitez pas et contactez-nous !</p>
+          <button  data-bs-toggle="modal" data-bs-target="#contactmodal" class="btn btn-sm btn-outline-secondary contact" type="button"><span>Contactez-nous !</span></button>
+    </div>
+  <div class="col col-md-12 col-lg-7">
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            À qui s'adresse MXTRAINER ?
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            MXTRAINER s'adresse autant aux pilotes qu'aux motoclubs, mais également aux photographes du motocross. Les pilotes peuvent s'inscrire aux entraînements proposés par les motoclubs et les photographes peuvent ajouter leurs clichés par la suite.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Pourquoi choisir MXTRAINER ?
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            MXTRAINER gère ta saison d'entraînement. Elle permet un gain de temps et une augmentation des inscriptions pour les motoclubs. Elle permet aux pilotes d'être tenu au courant des nouveaux entraînements en temps réel, MXTRAINER simplifie complétement la gestion des entraînements, autant pour les motoclubs que pour les pilotes. Enfin, MXTRAINER permet aux photographes d'augmenter leur notoriété, de mettre à disposition leurs photos facilement. MXTRAINER propose un espace dédié pour ces 3 acteurs.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Quelles sont les modalités d'inscription ?
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            MXTRAINER demande lors de l'inscription un justificatif de création d'association pour l'inscription en tant que motoclub. Pour les pilotes, MXTRAINER demandera un justificatif de licence FFM.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFoor" aria-expanded="false" aria-controls="collapseFoor">
+            Comment sont gérées les photos ?
+          </button>
+        </h2>
+        <div id="collapseFoor" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            Les photos d'entraînements seront disponibles une fois l'entraînement clôturé. Tout est possible : ajouter un album en favoris, enregistrer une photo, la partager sur les réseaux sociaux.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+            Est-ce que tous les clubs sont référencés ?
+          </button>
+        </h2>
+        <div id="collapsefive" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            Seuls les motoclubs inscrits sont référencés sur l'application, n'hésitez pas à en parler à vos motoclubs préférés !
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+
+<section class="rejoindre">
+  <div class="row block-RS" id="RS">
+    <div class="intro-RS">
+      <h1>Rejoignez-nous</h1>
+    </div>
+    <div class="content-RS">
+      <a href="https://www.facebook.com/profile.php?id=100090329315348" target="_blank"> 
+        <img src="../IMG/assets/SVG/FB.svg" alt="Facebook">
+      </a>
+    
+    <a href="https://www.instagram.com/mxtrainer.fr/" target="_blank"> 
+      <img src="../IMG/assets/SVG/insta.svg" alt="Instagram">
+    </a>
+    
+    <a href="https://www.tiktok.com/@mxtrainer.fr?is_from_webapp=1&sender_device=pc" target="_blank">
+      <img src="../IMG/assets/SVG/tiktok.svg" alt="Tiktok">
+    </a>
+    </div>
+  </div>
+</section>
+
+
+<section class="interested">
+  <div class="row block6" id="interested">
+    <div class="intro-interested">
+      <h1 style="font-size: 36px;">Prêt à commencer ?</h1>
+      <p style="font-size: 18px;font-weight: 300">Restez informé des mises à jour et des prochaines remises sur la plateforme !</p>
+    </div>
+    <div class="form-interested">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Email" aria-label="Recipient's username" aria-describedby="button-addon2">
+        <button class="btn btn-outline-secondary btn-form" type="button" id="button-addon2"><span>S'inscrire</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="py-3 my-4">
+  <div class="logo-footer">
+    <img src="../IMG/assets/SVG/display-logo2.svg" alt="MXTRAINER">
+  </div>
+  <ul class="nav justify-content-center menu-footer">
+<li class="nav-item"><a class="nav-link px-4 text-muted" href="#fonctionnalités">Fonctionnalités</a></li>
+<li class="nav-item"><a class="nav-link px-4 text-muted" href="#tutoriel">Tutoriel</a></li>
+<li class="nav-item"><a class="nav-link px-4 text-muted" href="#tabs">Espaces</a></li>
+<li class="nav-item"><a class="nav-link px-4 text-muted" href="#FAQ">FAQ</a></li>
+<li class="nav-item"><a class="nav-link px-4 text-muted" data-bs-toggle="modal" data-bs-target="#contactmodal" >Contact</a></li>
+  </ul>
+  <div class="app-footer">
+    <img src="../IMG/assets/SVG/logos_apple-app-store.svg" alt="logo-applestore">
+    <img src="../IMG/assets/SVG/logos_google-play-icon.svg" alt="logo-playstore">
+  </div>
+  <div class="footer-down">
+    <ul class="nav justify-content-center menu-footer">
+      <li class="nav-item"><a class="nav-link px-2 text-muted" href="#">© 2023 MXTRAINER, Inc</a></li>
+      <li class="nav-item"><a class="nav-link px-2 text-muted" href="#">Conditions générales de vente</a></li>
+      <li class="nav-item"><a class="nav-link px-2 text-muted" href="#">Conditions d'utilisation</a></li>
+      <li class="nav-item"><a class="nav-link px-2 text-muted" href="#">Mentions légales</a></li>        </ul>
+  </div>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="script.js"></script>
+<script>
+  AOS.init();
+</script>
+  </body>
+</html>
