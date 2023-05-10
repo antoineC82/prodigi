@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="shortcut icon" type="image/png" href="{{ '../IMG/favicon/favicon-16x16.png'  | absolute_url }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="../IMG/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../IMG/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../IMG/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../IMG/favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <meta charset="utf-8">
+    <meta name="keywords" content="training, MX, motoclub, FFM, motocross, entraînement de motocross, licence FFM, association de motocross, Fédération française de motocyclisme">
+    <meta name="description" content="MXTRAINER, l'application qui gère ta saison de motocross. un espace motoclub pour gérer ses entraînements, un espace pilote pour s'y inscrire et un espace photographes pour publier les meilleurs clichés !">
+    <meta name="author" content="MXTRAINER">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Document</title>
+
+  <!---------------------------------- bootstrap ---------------------------------->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+  <!---------------------------------- icone fontawesome ---------------------------------->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+
+
+  <link rel="stylesheet" type="text/css" href="home-gratuit.css" />
+</head>
+
+<body>
+  <div class="app-container">
+    <div class="app-header">
+      <div class="app-header-left">
+        <span class="app-icon"></span>
+        <p class="app-name">Administrateur</p>
+        <div class="search-wrapper">
+        <form method="POST" action="" style="width: 100%;">
+          <input class="search-input" type="text" placeholder="Rechercher" style="width: 90%;" name="motcle">
+          <button type="submit" name="search" style="border: none;background:none;"><i class="fas fa-search"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="app-header-right">
+        <button class="mode-switch" title="mode sombre">
+          <a><i class="far fa-moon fa-2x"></i></a>
+        </button>
+        <button class="notification-btn" title="Déconnexion" onclick="window.location.href='../deco/déconnexion.html'">
+        <i class="fas fa-sign-out-alt fa-2x"></i>
+        </button>
+        <button class="profile-btn">
+        <img src="#" alt="" title="avatar"/>
+          <span>Prenom</span>
+        </button>
+      </div>
+    </div>
+    <div class="app-content">
+      <div class="app-sidebar">
+        <a href="#" class="app-sidebar-link active">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+            <polyline points="9 22 9 12 15 12 15 22" />
+          </svg>
+        </a>
+        <a href="#" class="app-sidebar-link">
+          <i class="far fa-user fa-lg"></i>
+        </a>
+        <a href="#" class="app-sidebar-link">
+          <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-settings" viewBox="0 0 24 24">
+            <defs />
+            <circle cx="12" cy="12" r="3" />
+            <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z" />
+          </svg>
+        </a>
+      </div>
+      <div class="projects-section">
+        <div class="projects-section-header">
+          <p>Athlètes</p>
+          <p class="time">Date J</p>
+        </div>
+        <div class="projects-section-line">
+          <div class="projects-status">
+            <div class="item-status">
+              <span class="status-number">number1</span>
+              <span class="status-type">Benjamin</span>
+            </div>
+            <div class="item-status">
+              <span class="status-number">number2</span>
+              <span class="status-type">Minime</span>
+            </div>
+            <div class="item-status">
+              <span class="status-number">number3</span>
+              <span class="status-type">Cadet</span>
+            </div>
+            <div class="item-status">
+              <span class="status-number">number4</span>
+              <span class="status-type">Junior</span>
+            </div>
+            <div class="item-status">
+              <span class="status-number">number5</span>
+              <span class="status-type">Total</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-boxes jsGridView">
+            <div class="project-box-wrapper">
+              <div class="project-box">
+                <div class="project-box-header">
+                <img class="img-pro" src="#" alt="" title="avatar">
+                </div>
+                <div class="project-box-content-header">
+                  <p class="box-content-header" style="font-size:20px;">Prenom + nom</p>
+                  <p class="box-content-subheader" style="font-size:18px;">Nom club</p>
+                  <p class="box-content-subheader" style="font-size:18px;">libelle</p>
+                  <p class="box-content-subheader">date-inscri</p>
+                </div>
+                <div class="project-box-footer" style="display: flex;justify-content:end;">
+                <div class="button-supp">
+                <a style="color:white;" href="#"><i class="fas fa-trash"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="messages-section">
+        <div class="projects-section-header">
+          <p>Listes des clubs</p>
+          <button class="add-btn" title="Ajouter nouveaux projet" data-toggle="modal" data-target="#ajoutclub">
+          <i class="fas fa-plus  fa-2x"></i>
+        </button>
+        </div>
+        <div class="messages">
+          <div class="message-box">
+            <div class="message-content">
+              <div class="message-header">
+                <div class="name">Nom <br/>Ville</div>
+                <div class="star-checkbox">
+                  <div class="name">N°club</div>
+                </div>
+                <div class="name"><i class="fas fa-phone-volume"></i>Tel club</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <script src="home-gratuit.js"></script>
+
+</body>
+
+</html>
