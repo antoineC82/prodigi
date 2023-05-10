@@ -19,7 +19,7 @@ body{
 
 body::before {    
     content: "";
-    background-image: url('../IMG/assets/SVG/mx.svg') , url('../IMG/assets/SVG/trainer.svg');
+    background-image: url('IMG/assets/SVG/mx.svg') , url('IMG/assets/SVG/trainer.svg');
     background-position: left top, right bottom;
     background-repeat: no-repeat, no-repeat;
     background-size: 50%, 50%;
